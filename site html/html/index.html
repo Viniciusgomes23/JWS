@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>JWS Climatização</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #05AAD8;
+    padding: 15px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== SEÇÃO ===== */
+section {
+    padding: 40px 20px;
+}
+
+.sobre {
+    background: #fff;
+    text-align: center;
+}
+
+.sobre h2 {
+    margin-bottom: 15px;
+}
+
+/* ===== CARROSSEL ===== */
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+#conteudo img,
+#conteudo video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ===== BOTÕES ===== */
+button {
+    padding: 10px 14px;
+    background: white;
+    color: #05AAD8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #e6e6e6;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== MENU ===== -->
+<header>
+<nav>
+    <img src="img/logo.jpeg" width="160">   <p style="color: white; font-size: 30px;"><b>JWS Climatização</b> </p>
+    <ul>
+
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="login.html">Entrar</a></li>
+        <li><a href="cadastro.html">Cadastrar</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- ===== SOBRE ===== -->
+<section id="sobre" class="sobre">
+<h2>Sobre a Empresa</h2>
+
+<p>
+Somos uma empresa especializada em <b>energia solar e climatização</b>,
+oferecendo soluções modernas, eficientes e sustentáveis para residências,
+comércios e indústrias.
+</p>
+
+<div class="carrossel">
+    <button onclick="prev()">◀</button>
+    <div id="conteudo"></div>
+    <button onclick="next()">▶</button>
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<p>© 2025 - JWS Climatização. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ===== WHATSAPP ===== -->
+<a href="https://wa.me/5582988218576" target="_blank" class="whatsapp">
+    <img src="img/zap.png" width="32">
+</a>
+
+<!-- ===== JS ===== -->
+<script>
+var atual = 0;
+
+var itens = [
+    '<video controls><source src="video/1.mp4"></video>',
+    '<img src="img/1.jpeg">',
+    '<img src="img/2.jpeg">',
+    '<img src="img/3.jpeg">',
+    '<img src="img/4.jpeg">'
+];
+
+function mostrar() {
+    document.getElementById("conteudo").innerHTML = itens[atual];
+}
+
+function next() {
+    atual = (atual + 1) % itens.length;
+    mostrar();
+}
+
+function prev() {
+    atual = (atual - 1 + itens.length) % itens.length;
+    mostrar();
+}
+
+window.onload = mostrar;
+</script>
+
+</body>
+</html>

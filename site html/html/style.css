@@ -1,0 +1,14 @@
+
+
+.carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.whatsapp {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+

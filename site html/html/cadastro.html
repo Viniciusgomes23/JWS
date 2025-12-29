@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar | JWS Climatização</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #05AAD8, #1e90ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            animation: fade 0.8s ease;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-box h1 {
+            text-align: center;
+            color: #0a3cff;
+            margin-bottom: 10px;
+        }
+
+        .login-box p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #0a3cff;
+            box-shadow: 0 0 0 2px rgba(10,60,255,0.15);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: #0a3cff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            background: #062dbd;
+            transform: scale(1.02);
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .links a {
+            display: block;
+            text-decoration: none;
+            color: #0a3cff;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h1>Criar Conta</h1>
+        <p>Preencha os dados para se cadastrar</p>
+
+        <form>
+            <div class="input-group">
+                <label>Nome completo</label>
+                <input type="text" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Senha</label>
+                <input type="password" placeholder="Crie uma senha" required>
+            </div>
+
+            <div class="input-group">
+                <label>Confirmar senha</label>
+                <input type="password" placeholder="Repita a senha" required>
+            </div>
+
+            <button class="btn-login">Cadastrar</button>
+        </form>
+
+        <div class="links">
+            <a href="login.html">Já tenho conta</a>
+            <a href="index.html">Voltar ao site</a>
+        </div>
+    </div>
+
+</body>
+</html>
